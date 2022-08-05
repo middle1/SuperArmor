@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/middle1/SuperArmor
+build-by-default: true
+branches:
+- main
+projects:
+  SuperArmor:
+    path: ""
+...
