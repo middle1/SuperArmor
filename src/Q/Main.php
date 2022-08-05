@@ -60,7 +60,7 @@ if ($result === null) {
 		$sender->sendMessage("Возьмите в руку ". $this->config->getNested("full-armor.cost")  . " алмазов");
 		return false;
 		}
-//		$sender->getInventory()->removeItem(ItemFactory::getInstance()->get($this->config->getNested("buy-armor.id-item-for-buy"), 0, $this->config->getNested("full-armor.cost")));
+		$sender->getInventory()->removeItem(ItemFactory::getInstance()->get($this->config->getNested("buy-armor.id-item-for-buy"), 0, $this->config->getNested("full-armor.cost")));
 		$position = $sender->getPosition();
 		//Все предметы
 		$boots = ItemFactory::getInstance()->get($this->config->getNested("boots.id"), 0, 1); // Ботинки
