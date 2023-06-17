@@ -1,3 +1,10 @@
+- Update version
+- Add video
+- Update api to 5.0.0
+- Update Main.php
+- Изменение версиии
+- *added lib
+- Обновление CHANGELOG
 - Удаление старых дерикторий
 - Добавил CHANGELOG
 - Добавление дополнителлного класса, который булет накладывать чары на предмет
