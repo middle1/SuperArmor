@@ -1,28 +1,31 @@
 helmet:
   name: СУПЕР-ШЛЕМ
-  id: 302
+  ItemName: CHAINMAIL_HELMET
   enchants:
     id: 0
     level: 200
 chest:
   name: СУПЕР-НАГРУДНИК
-  id: 303
+  ItemName: CHAINMAIL_CHESTPLATE
   enchants:
     id: 0
     level: 200
 leggins:
   name: СУПЕР-ШТАНЫ
-  id: 304
+  ItemName: CHAINMAIL_LEGGINGS
   enchants:
     id: 0
     level: 200
 boots:
   name: СУПЕР-БОТИНКИ
-  id: 305
+  ItemName: CHAINMAIL_BOOTS
   enchants:
     id: 0
     level: 200
 full-armor:
-  cost: 200
+  cost: 64
 buy-armor:
-  id-item-for-buy: 264
+  name-item-for-buy: DIAMOND
+
+# Все id предметов можно посмотреть в файле item/ItemTypeIds.php
+# Все именна предметов писать строго капсом и искать их в item/VanillaItems

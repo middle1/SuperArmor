@@ -2,29 +2,34 @@
 
 namespace superarmor\middle\Data;
 
-use pocketmine\item\Item;
-use pocketmine\item\ItemFactory;
+use pocketmine\item\VanillaItems;
 use pocketmine\utils\Config;
 
 class Items {
-	
-	public function __construct(Config $config) {
+
+    private $config;
+
+    public function __construct(Config $config) {
 		$this->config = $config;
 	}
 	
-	public function getId(string $data){
+	public function getName(string $data){
 		switch($data){
 			case 'boots':
-			return $boots = ItemFactory::getInstance()->get($this->config->getNested("boots.id"), 0, 1); // Ботинки
+			$name =  $this->config->getNested("boots.ItemName");
+			return VanillaItems::$name(); // Ботинки
 			break;
 			case 'chest':
-			return $chest = ItemFactory::getInstance()->get($this->config->getNested("chest.id"), 0, 1); // Кирасса
+			$name = $this->config->getNested("chest.ItemName");
+			return VanillaItems::$name(); // Кирасса
 			break;
 			case 'helmet':
-			return $helmet = ItemFactory::getInstance()->get($this->config->getNested("helmet.id"), 0, 1); // Шлем
+            $name = $this->config->getNested("helmet.ItemName");
+			return VanillaItems::$name(); // Шлем
 			break;
-			case 'legins':
-			return $legins = ItemFactory::getInstance()->get($this->config->getNested("leggins.id"), 0, 1); // Штаны
+			case 'leggins':
+			$name = $this->config->getNested("leggins.ItemName");
+			return VanillaItems::$name(); // Штаны
 			break;
 			default:
 			return null;
@@ -35,20 +40,17 @@ class Items {
 	public function setName(string $dataCommand, $dataItem){
 		switch($dataCommand){
 			case 'boots':
-			 $boots = $dataItem->setCustomName($this->config->getNested("boots.name"));
+			return $dataItem->setCustomName($this->config->getNested("boots.name"));
 			return $boots;
 			break;
 			case 'chest':
-			 $chest = $dataItem->setCustomName($this->config->getNested("chest.name"));
-			return $chest;
+			return $dataItem->setCustomName($this->config->getNested("chest.name"));
 			break;
 			case 'helmet':
-			 $helmet = $dataItem->setCustomName($this->config->getNested("helmet.name"));
-			return $helmet;
+			 return $dataItem->setCustomName($this->config->getNested("helmet.name"));
 			break;
-			case 'legins':
-			 $legins = $dataItem->setCustomName($this->config->getNested("leggins.name"));
-			return $legins;
+			case 'leggins':
+			 return $dataItem->setCustomName($this->config->getNested("leggins.name"));
 			break;
 		}
 	}

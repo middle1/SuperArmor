@@ -14,10 +14,10 @@ class Enchantments {
 
 	public function getEnchantments(string $nameItem){
 		$ItemsClass = new Items($this->config);
-		$boots = $ItemsClass->getId("boots"); 
-		$chest = $ItemsClass->getId("chest"); 
-		$helmet = $ItemsClass->getId("helmet"); 
-		$legins = $ItemsClass->getId("legins"); 
+		$boots = $ItemsClass->getName("boots");
+		$chest = $ItemsClass->getName("chest");
+		$helmet = $ItemsClass->getName("helmet");
+		$leggins = $ItemsClass->getName("leggins");
 		switch($nameItem){
 			case 'boots':
 			$boots = $boots->addEnchantment(
@@ -46,14 +46,14 @@ class Enchantments {
 							);
 			return $helmet;
 			break;
-			case 'legins':
-			$legins = $legins->addEnchantment(
+			case 'leggins':
+			$leggins = $leggins->addEnchantment(
 								new EnchantmentInstance(
 									EnchantmentIdMap::getInstance()->fromId($this->config->getNested("leggins.enchants.id")),
 									$this->config->getNested("leggins.enchants.level")
 								)
 							);
-			return $legins;
+			return $leggins;
 			break;
 			default:
 			return null;
