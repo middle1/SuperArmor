@@ -1,3 +1,7 @@
+- Change global namespace to superarmor/middle1
+- Delete src/superarmor/middle1 directory
+- Rename middle to middle1
+- Update changelog
 - Update version
 - Add video
 - Update api to 5.0.0
