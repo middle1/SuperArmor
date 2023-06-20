@@ -1,11 +1,11 @@
 <?php
 
-namespace superarmor\middle\Data;
+namespace superarmor\middle1\Data;
 
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\data\bedrock\EnchantmentIdMap;
 use pocketmine\utils\Config;
-use superarmor\middle\Data\Items;
+use superarmor\middle1\Data\Items;
 
 class Enchantments {
 	public function __construct(Config $config) {

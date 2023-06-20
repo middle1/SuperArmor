@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace superarmor\middle\libs\FormAPI;
+namespace superarmor\middle1\libs\FormAPI;
 
 use pocketmine\plugin\PluginBase;
 

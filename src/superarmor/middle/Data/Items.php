@@ -1,6 +1,6 @@
 <?php
 
-namespace superarmor\middle\Data;
+namespace superarmor\middle1\Data;
 
 use pocketmine\item\VanillaItems;
 use pocketmine\utils\Config;
