@@ -1,11 +1,10 @@
 - Change language to en
 - Add icon
-- Change name folder middle to middle1
+
 - Change name folder middle to middle1
 - Update changelog
 - Change global namespace to superarmor/middle1
 - Delete src/superarmor/middle1 directory
-- Rename middle to middle1
 - Update changelog
 - Update version
 - Add video
