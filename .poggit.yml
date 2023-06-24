@@ -5,4 +5,5 @@ branches:
 projects:
   SuperArmor:
     path: ""
+    icon: "icon.png"
 ...
