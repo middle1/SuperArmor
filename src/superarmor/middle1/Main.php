@@ -33,12 +33,12 @@ class Main extends PluginBase implements Listener
     {
         if ($cmd->getName() == "armor") {
             if (!$p instanceof Player) {
-                $this->getLogger()->info("Только игрок");
+                $this->getLogger()->info("Only player");
                 return true;
             }
 
             if (!$p->isSurvival()) {
-                $p->sendMessage("§cТолько в выживание!");
+                $p->sendMessage("§cIn survival only!");
                 return true;
             }
 
@@ -57,7 +57,7 @@ class Main extends PluginBase implements Listener
                             $ItemsClass = new Items($this->config); //объявления Items класса
                             if ($item_in_hand_name != $this->config->getNested("buy-armor.name-item-for-buy") || $item_count < $this->config->getNested("full-armor.cost")) {
                                 $sender->sendMessage(
-                                    "Возьмите в руку " . $this->config->getNested("full-armor.cost") . " алмазов");
+                                    "Take in hand  " . $this->config->getNested("full-armor.cost") . " diamonds");
                                 return true;
                             }
                             $inventory->removeItem(VanillaItems::DIAMOND()->setCount(64));
@@ -104,7 +104,7 @@ class Main extends PluginBase implements Listener
                             break;
 
                         case 1:
-                            $sender->sendMessage("После покупки вам будет выдана броня " . $this->config->getNested("leggins.enchants.level") . " защиты\n Стоимость этой брони " . $this->config->getNested("full-armor.cost") . " алмазов");
+                            $sender->sendMessage("After purchase you will be given armor " . $this->config->getNested("leggins.enchants.level") . " protection\nThe cost of this armor " . $this->config->getNested("full-armor.cost") . " diamonds");
                             break;
 
                         case 2:
@@ -114,10 +114,10 @@ class Main extends PluginBase implements Listener
                     return false;
                 }
             );
-            $form->setTitle("§n§dПокупка супер-брони");
-            $form->addButton("§8Купить супер-броню", 0, "textures/items/chainmail_chestplate.png");
-            $form->addButton("§7Что это такое?", 0, "textures/items/book_normal.png");
-            $form->addButton("§o§cВыйти");
+            $form->setTitle("§n§dPurchase of super armor");
+            $form->addButton("§8To buy super armor", 0, "textures/items/chainmail_chestplate.png");
+            $form->addButton("§7FAQ", 0, "textures/items/book_normal.png");
+            $form->addButton("§o§cExit");
             $form->sendToPlayer($p);
             return true;
         }
