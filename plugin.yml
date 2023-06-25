@@ -6,9 +6,9 @@ author: vk.com/middle3
 
 commands:
  armor:
-   description: Супер броня
-   permission: permission.armor
+   description: Super armor
+   permission: superarmor.permission
 
 permissions:
-  permission.armor:
+  superarmor.permission:
     default: true
