@@ -9,7 +9,7 @@ use pocketmine\player\Player;
 use pocketmine\item\VanillaItems;
 use pocketmine\utils\Config;
 use pocketmine\math\Vector3;
-use superarmor\middle1\libs\FormAPI\SimpleForm;
+use superarmor\middle1\libs\Form\SimpleForm;
 use superarmor\middle1\Data\ {
     Enchantments, Items
 };
