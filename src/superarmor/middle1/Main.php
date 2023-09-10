@@ -60,7 +60,7 @@ class Main extends PluginBase implements Listener
                                     "Take in hand  " . $this->config->getNested("full-armor.cost") . " diamonds");
                                 return true;
                             }
-                            $inventory->removeItem(VanillaItems::DIAMOND()->setCount(64));
+                            $inventory->removeItem(VanillaItems::DIAMOND()->setCount($this->config->getNested("full-armor.cost")));
                             $position = $sender->getPosition();
                             //Все предметы
                             $boots = $ItemsClass->getName("boots"); // Ботинки
