@@ -9,7 +9,7 @@ use pocketmine\player\Player;
 use pocketmine\item\VanillaItems;
 use pocketmine\Server;
 use pocketmine\utils\Config;
-use superarmor\middle1\libs\jojoe77777\FormAPI\SimpleForm;
+use jojoe77777\FormAPI\SimpleForm;
 use superarmor\middle1\Data\ {
     Enchantments, Items
 };
@@ -114,7 +114,6 @@ class Main extends PluginBase implements Listener
                             break;
 
                         case 2:
-                            return true;
                             break;
                     }
                     return false;
@@ -127,5 +126,6 @@ class Main extends PluginBase implements Listener
             $form->sendToPlayer($sender);
             return true;
         }
+        return true;
     }
 }
