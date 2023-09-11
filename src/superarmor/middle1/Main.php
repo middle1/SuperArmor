@@ -58,7 +58,7 @@ class Main extends PluginBase implements Listener
                             if ($item_in_hand_name != $this->config->getNested("buy-armor.name-item-for-buy") || $item_count < $this->config->getNested("full-armor.cost")) {
                                 $sender->sendMessage(
                                     "Take in hand  " . $this->config->getNested("full-armor.cost") . " diamonds");
-                                return true;
+                                return true; 
                             }
                             $inventory->removeItem(VanillaItems::DIAMOND()->setCount($this->config->getNested("full-armor.cost")));
                             $position = $sender->getPosition();
